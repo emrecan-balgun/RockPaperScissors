@@ -1,6 +1,11 @@
-import React from 'react'
+import React from 'react';
+import { useSelector } from 'react-redux';
+import { score } from '../redux/historySlice';
 
 function ScoreBoard() {
+
+    const scoreBoard = useSelector(score);
+
     return (
         <div className="scoreContainer">
             <div className="scoreBoard">
@@ -8,7 +13,7 @@ function ScoreBoard() {
                 <div className="board">
                     <h1>Score</h1>
                     <div className="box">
-                        <h2>0</h2>
+                        <h2>{scoreBoard}</h2>
                     </div>
                 </div>
             </div>

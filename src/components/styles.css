@@ -4,6 +4,10 @@
   background-color: #455d7a;
   color: #ececec;
   font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
 }
 
 .main {
@@ -121,4 +125,16 @@
   font-size: 40px;
   background-color: transparent;
   color: #142d4c;
+}
+
+.Computer{
+  background-color: red;
+}
+
+.Player{
+  background-color: green;
+}
+
+.Draw{
+  background-color: yellow;
 }
