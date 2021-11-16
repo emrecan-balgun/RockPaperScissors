@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+* {
+  background-color: #455d7a;
+  color: #ececec;
+  font-family: 'Roboto', sans-serif;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 200px;
+  }
+
+.container {
+  text-align: center;
+}
+
+.container h1 {
+  margin-bottom: 10px;
+  font-size: 48px;
+}
+
+.gameContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.playerChoice {
+  width: 80px;
+  height: 100px;
+  cursor: pointer;
+  flex: 0 0 50%;
+}
+
+.computerChoice {
+  width: 80px;
+  height: 100px;
+  flex: 0 0 50%;
+}
+
+.history {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.history h1 {
+  font-size: 46px;
+  margin-bottom: 10px;
+}
+
+.historyContainer {
+  white-space: nowrap;
+  overflow: auto;
+  text-overflow: ellipsis;
+  height: 420px;
+  background-color: #e3e3e3;
+  color: #142d4c;
+  width: 200px;
+  border-radius: 1.25rem;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.round {
+  background-color: transparent;
+  color: #142d4c;
+  font-size: 18px;
+  text-align: center;
+}
+
+.scoreContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.scoreBoard {
+  margin-top: 10px;
+  width: 700px;
+  height: 140px;
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 1.25rem;
+}
+
+.scoreBoard .gameName {
+  float: left;
+  font-size: 30px;
+  margin-left: 30px;
+  width: 120px;
+}
+
+.scoreBoard .board {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  float: right;
+  margin-right: 30px;
+}
+
+.scoreBoard .board h1 {
+  margin-bottom: 10px;
+}
+
+.box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  height: 60px;
+  width: 80px;
+  border-radius: 0.5rem;
+}
+
+.box h2 {
+  font-size: 40px;
+  background-color: transparent;
+  color: #142d4c;
+}
