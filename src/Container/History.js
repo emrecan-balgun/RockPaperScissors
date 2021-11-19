@@ -1,22 +1,36 @@
 import { useSelector } from "react-redux";
 import { history } from "../redux/historySlice";
+import { useState } from "react";
 
 function History() {
   const historyList = useSelector(history);
-/*   const roundWinner = useSelector(roundCount); */
+  const [showHistory, setShowHistory] = useState(true);
+
+  const toggleHistory = () => {
+    setShowHistory(!showHistory);
+  };
 
   return (
     <div className="history">
-      <h1 className="history__title">History</h1>
-      <div className="history-container">
+      <div className="history__title" onClick={toggleHistory}>
+        History
+      </div>
+      <div
+        className={`history__container ${
+          showHistory ? "history__container--toggle" : ""
+        }`}
+      >
         {historyList.map((history, key) => (
-          <p className={`history-container__round ${history.roundWinner}`} key={key}>
-            {history.playerChoice}
-            <span style={{ color: "#B91646", backgroundColor: "transparent" }}>
+          <div
+            className={`history__container-round history__container--${history.roundWinner.toLowerCase()}`}
+            key={key}
+          >
+            <p>
+              {history.playerChoice}
               vs
-            </span>
-            {history.computerChoice}
-          </p>
+              {history.computerChoice}
+            </p>
+          </div>
         ))}
       </div>
     </div>

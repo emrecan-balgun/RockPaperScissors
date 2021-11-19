@@ -1,0 +1,37 @@
+@import '../Config/variables';
+@import '../Abstracts/mixins';
+
+.choice-board{
+    height: 100%;
+
+    &__container{
+        @include flexbox($direction: column);
+        row-gap: 1rem;
+    }
+
+    &__img{
+        width: 5rem;
+        transition: .5s all;
+
+        &--cursor{
+            cursor: pointer;
+            &:hover{
+                transform: scale(1.1);
+            }
+        }
+    }
+
+    &__player{
+        font-size: $bigger-font-size;
+    }
+
+    &__computer{
+        font-size: $bigger-font-size;
+    }
+
+    @media screen and (min-width: $medium-screen){
+        &__img{
+            width: 10rem;
+        }
+    }
+}
