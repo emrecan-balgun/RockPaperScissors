@@ -1,0 +1,52 @@
+@import '../Abstracts/mixins';
+@import '../Config/variables';
+
+.score-board {
+  width: 100%;
+/*   box-shadow: 1px 5px 5px 0px rgba(0,0,0,0.75); */
+  height: 7rem;
+  @include flexbox();
+
+  &__container{
+    @include flexbox($justify: space-around);
+    border: 2px solid $white;
+    border-radius: 1.25rem;
+    width: 90%;
+    padding: .25rem;
+      
+  }
+
+  &__title{
+    @include flexbox($direction: column, $align: flex-start);
+    font-size: $big-font-size;
+  }
+
+  &__score{
+    @include flexbox($direction: column);
+    row-gap: .25rem;
+
+  }
+
+  &__score-point{
+      font-size: 1.5rem;
+      background-color: $white;
+      color: $black;
+      width: 2rem;
+      text-align: center;
+      border-radius: .5rem;
+  }
+
+  @media screen and (min-width: $medium-screen){
+        &__container{
+            width: 70%;
+        }
+    }
+
+    @media screen and (min-width: $large-screen){
+        &__container{
+            width: 50%;
+        }
+    }
+    
+}
+
