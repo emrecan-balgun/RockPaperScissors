@@ -7,10 +7,10 @@ function History() {
 
   return (
     <div className="history">
-      <h1>History</h1>
-      <div className="historyContainer">
+      <h1 className="history__title">History</h1>
+      <div className="history-container">
         {historyList.map((history, key) => (
-          <p className={`round ${history.roundWinner}`} key={key}>
+          <p className={`history-container__round ${history.roundWinner}`} key={key}>
             {history.playerChoice}
             <span style={{ color: "#B91646", backgroundColor: "transparent" }}>
               vs

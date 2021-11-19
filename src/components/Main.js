@@ -54,31 +54,31 @@ function Main() {
       <ScoreBoard />
       <div className="main">
         <div className="container">
-          <h1>Player</h1>
-          <div className="gameContainer">
+          <h1 className="container__title">Player</h1>
+          <div className="game-container">
             <img
-              className="playerChoice"
+              className="game-container__playerChoice"
               onClick={() => game(choiceList[0])}
               src={choiceImgList[0]}
               alt={choiceList[0]}
             />
             <img
-              className="playerChoice"
+              className="game-container__playerChoice"
               onClick={() => game(choiceList[1])}
               src={choiceImgList[1]}
               alt={choiceList[1]}
             />
             <img
-              className="playerChoice"
+              className="game-container__playerChoice"
               onClick={() => game(choiceList[2])}
               src={choiceImgList[2]}
               alt={choiceList[2]}
             />
           </div>
           <h1>Computer</h1>
-          <div className="gameContainer">
+          <div className="game-container">
             <img
-              className="computerChoice"
+              className="game-container__computerChoice"
               src="https://i.ibb.co/NmgKXvZ/rock.png"
               alt="rock"
             />

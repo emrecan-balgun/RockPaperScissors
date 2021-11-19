@@ -7,13 +7,13 @@ function ScoreBoard() {
     const scoreBoard = useSelector(score);
 
     return (
-        <div className="scoreContainer">
-            <div className="scoreBoard">
-                <h1 className="gameName">Rock Paper Scissors</h1>
-                <div className="board">
-                    <h1>Score</h1>
-                    <div className="box">
-                        <h2>{scoreBoard}</h2>
+        <div className="score-container">
+            <div className="score-board">
+                <h1 className="score-board__game-name">Rock Paper Scissors</h1>
+                <div className="score-board__board">
+                    <h1 className="score-board__board__title">Score</h1>
+                    <div className="score-board__box">
+                        <h2 className="score-board__box__title">{scoreBoard}</h2>
                     </div>
                 </div>
             </div>
