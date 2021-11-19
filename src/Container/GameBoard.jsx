@@ -1,10 +1,11 @@
 import ChoiceBoard from "./ChoiceBoard";
+import History from "./History";
 
 const GameBoard = () => {
   return (
     <div className="game-board">
       <ChoiceBoard />
-      {/* <History /> */}
+      <History />
     </div>
   );
 };
