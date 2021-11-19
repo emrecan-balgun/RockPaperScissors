@@ -4,7 +4,6 @@
 .score-board {
   width: 100%;
 /*   box-shadow: 1px 5px 5px 0px rgba(0,0,0,0.75); */
-  height: 7rem;
   @include flexbox();
 
   &__container{
@@ -13,6 +12,7 @@
     border-radius: 1.25rem;
     width: 90%;
     padding: .25rem;
+    height: $score-board-height;
       
   }
 
@@ -38,7 +38,7 @@
 
   @media screen and (min-width: $medium-screen){
         &__container{
-            width: 70%;
+            width: 80%;
         }
     }
 
