@@ -34,4 +34,9 @@
             width: 8rem;
         }
     }
+
+
+    @media screen and (min-width: $medium-screen){
+        height: 450px;
+    }
 }

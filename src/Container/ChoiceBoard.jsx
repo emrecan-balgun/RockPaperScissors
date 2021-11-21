@@ -1,6 +1,5 @@
 import {
   addHistory,
-  increaseRound,
   scoreBoard,
   currentComputer,
   setCurrentComputerChoice,
@@ -52,7 +51,7 @@ const ChoiceBoard = () => {
       ? dispatch(scoreBoard(-1))
       : dispatch(scoreBoard(0));
     dispatch(addHistory({ playerChoice, computerChoice, roundWinner }));
-    dispatch(increaseRound());
+
   };
 
   const computerImg =
@@ -90,7 +89,7 @@ const ChoiceBoard = () => {
         </div>
 
         <p className="choice-board__computer">Computer</p>
-        <div className="choice-board">
+        <div>
           <img
             className="choice-board__img"
             src={computerImg}

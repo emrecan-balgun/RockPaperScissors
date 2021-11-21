@@ -37,10 +37,10 @@
     line-height: 2rem;
     background-color: $first-color;
     border-radius: 1.5rem 1.5rem 0 0;
-    color: $white;
+    color: $second-color;
     text-align: center;
     font-size: $medium-font-size;
-    font-weight: $font-semi-bold;
+    font-weight: $font-bold;
     letter-spacing: 1px;
   }
 
@@ -72,6 +72,10 @@
       &::-webkit-scrollbar-thumb:hover {
         background: #ee6634;
       }
+    }
+
+    &__title{
+        border-radius: .5rem .5rem 0 0;
     }
   }
 }
