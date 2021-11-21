@@ -4,7 +4,7 @@
 .game{
     height: 100vh;
     width: 100%;
-    background-color: $first-color;
+    background-color: $second-color;
     @include flexbox($direction: column);
     row-gap: 2rem;
 

@@ -10,7 +10,7 @@
     }
 
     &__img{
-        width: 5rem;
+        width: 6rem;
         transition: .5s all;
 
         &--cursor{
@@ -22,16 +22,16 @@
     }
 
     &__player{
-        font-size: $bigger-font-size;
+        font-size: $big-font-size;
     }
 
     &__computer{
-        font-size: $bigger-font-size;
+        font-size: $big-font-size;
     }
 
-    @media screen and (min-width: $medium-screen){
+    @media screen and (min-width: $small-screen){
         &__img{
-            width: 10rem;
+            width: 8rem;
         }
     }
 }
