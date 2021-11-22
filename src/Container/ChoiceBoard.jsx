@@ -5,13 +5,15 @@ import {
   setCurrentComputerChoice,
 } from "../redux/historySlice";
 import {
+  defaultComputer,
   paperImage,
   rockImage,
   scissorsImage,
 } from "../Utils/Helpers/Images.helpers";
 
-
 import { useDispatch, useSelector } from "react-redux";
+import { RoundChoices } from "../Utils/Constants/Constants";
+import RoundSelection from "../components/RoundSelection";
 
 const ChoiceBoard = () => {
   const dispatch = useDispatch();
@@ -51,7 +53,6 @@ const ChoiceBoard = () => {
       ? dispatch(scoreBoard(-1))
       : dispatch(scoreBoard(0));
     dispatch(addHistory({ playerChoice, computerChoice, roundWinner }));
-
   };
 
   const computerImg =
@@ -61,40 +62,31 @@ const ChoiceBoard = () => {
       ? paperImage
       : currentComputerChoice === "Scissors"
       ? scissorsImage
-      : scissorsImage;
+      : defaultComputer;
 
   return (
     <div className="choice-board">
       <div className="choice-board__container">
         <p className="choice-board__player">Player</p>
         <div className="choice-board__images">
-          <img
-            className="choice-board__img choice-board__img--cursor"
-            onClick={() => game(choiceList[0])}
-            src={rockImage}
-            alt={rockImage}
-          />
-          <img
-            className="choice-board__img choice-board__img--cursor"
-            onClick={() => game(choiceList[1])}
-            src={paperImage}
-            alt={paperImage}
-          />
-          <img
-            className="choice-board__img choice-board__img--cursor"
-            onClick={() => game(choiceList[2])}
-            src={scissorsImage}
-            alt={scissorsImage}
-          />
+          {RoundChoices.map((choice) => {
+            const { name, src, alt, cursor } = choice;
+            return (
+              <RoundSelection
+                cursor={cursor}
+                src={src}
+                alt={alt}
+                name={name}
+                gameFunc={game}
+                onClick={true}
+              />
+            );
+          })}
         </div>
 
         <p className="choice-board__computer">Computer</p>
         <div className="choice-board__computer-choice">
-          <img
-            className="choice-board__img"
-            src={computerImg}
-            alt="rock"
-          />
+          <RoundSelection src={computerImg} />
         </div>
       </div>
     </div>

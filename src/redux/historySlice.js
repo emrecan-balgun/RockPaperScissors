@@ -32,6 +32,7 @@ export const historySlice = createSlice({
       state.value.history = []
       state.value.score = 0
       state.value.winner = ""
+      state.value.currentComputer = ""
     }
   },
 });
