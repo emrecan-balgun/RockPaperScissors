@@ -1,55 +1,88 @@
-@import '../Config/variables';
+@import "../Config/variables";
 
-.history{
-    position: absolute;
-    left: 0%;
-    bottom: 0;
-    width: 100%;
+.history {
+  position: absolute;
+  left: 0%;
+  bottom: 0;
+  width: 100%;
+  border-radius: 1.5rem 1.5rem 0 0;
 
-
-    
-    &__container{
-        max-height: 175px;
-        overflow: scroll;
-        &--toggle{
-            display: none;
-        }
-
-        &--computer{
-            background-color: red;
-          }
-          
-        &--player{
-            background-color: green;
-          }
-          
-        &--draw{
-            background-color: yellow;
-          }
-
-        &-round{
-            height: 24px;
-            p{
-                text-align: center;
-                color: $white;
-
-            }
-        }
+  &__container {
+    max-height: 175px;
+    &--toggle {
+      display: none;
     }
 
+    &-round {
+      background-color: $first-color;
+      border-top: 0.2px solid rgb(223, 220, 220);
+      p {
+        text-align: center;
+        color: $white;
+        padding: 0.5rem 0;
+        @include flexbox();
+        column-gap: 0.25rem;
+
+        span {
+          font-weight: $font-semi-bold;
+          letter-spacing: 0.5px;
+        }
+      }
+    }
+  }
+
+  &__title {
+    width: 100%;
+    height: 2rem;
+    line-height: 2rem;
+    background-color: $first-color;
+    border-radius: 1.5rem 1.5rem 0 0;
+    color: $second-color;
+    text-align: center;
+    font-size: $medium-font-size;
+    font-weight: $font-bold;
+    letter-spacing: 1px;
+  }
+
+  &__result-icon {
+    font-size: 1.5rem;
+    margin-left: 0.25rem;
+    fill: $second-color;
+  }
+
+  @media screen and (max-width: $medium-screen) {
+    &__container{
+        overflow-y: scroll;
+    }
+  }
+
+
+  @media screen and (min-width: $medium-screen) {
+    position: relative;
+    &__container {
+      display: block;
+      max-height: 400px;
+      overflow-y: scroll;
+
+      &::-webkit-scrollbar {
+        width: 0.25rem;
+        background-color: $first-color;
+      }
+
+      /* Handle */
+      &::-webkit-scrollbar-thumb {
+        background: #92310a;
+        border-radius: 0.2rem;
+      }
+
+      /* Handle on hover */
+      &::-webkit-scrollbar-thumb:hover {
+        background: #ee6634;
+      }
+    }
 
     &__title{
-        width: 100%;
-        height: 2rem;
-        line-height: 2rem;
-        background-color: $white;
-        color: chocolate;
-        text-align: center;
-        font-size: $big-font-size;
-        font-weight: $font-semi-bold;
-        border-radius: 1.5rem 1.5rem 0 0;
-        letter-spacing: 1px;
+        border-radius: .5rem .5rem 0 0;
     }
-
-
+  }
 }
