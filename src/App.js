@@ -1,5 +1,5 @@
 import React from "react";
-import Main from './Container/Game';
+import Main from './container/Game';
 import "./Styles/main.scss";
 
 
@@ -12,3 +12,6 @@ function App() {
 }
 
 export default App;
+
+
+

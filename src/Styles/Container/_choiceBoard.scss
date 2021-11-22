@@ -23,11 +23,13 @@
 
     &__player{
         font-size: $big-font-size;
+        color: $white;
     }
 
     &__computer{
         font-size: $big-font-size;
         margin-bottom: 0.5rem;
+        color: $white;
     }
 
     &__computer-choice{
