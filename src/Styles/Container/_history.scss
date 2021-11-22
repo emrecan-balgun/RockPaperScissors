@@ -50,6 +50,13 @@
     fill: $second-color;
   }
 
+  @media screen and (max-width: $medium-screen) {
+    &__container{
+        overflow-y: scroll;
+    }
+  }
+
+
   @media screen and (min-width: $medium-screen) {
     position: relative;
     &__container {

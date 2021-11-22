@@ -89,7 +89,7 @@ const ChoiceBoard = () => {
         </div>
 
         <p className="choice-board__computer">Computer</p>
-        <div>
+        <div className="choice-board__computer-choice">
           <img
             className="choice-board__img"
             src={computerImg}

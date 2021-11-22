@@ -27,6 +27,18 @@
 
     &__computer{
         font-size: $big-font-size;
+        margin-bottom: 0.5rem;
+    }
+
+    &__computer-choice{
+        @include flexbox($direction: column);
+        height: 96px;
+        width: 96px;
+    }
+
+    &__player-choice{
+        @include flexbox($direction: column);
+
     }
 
     @media screen and (min-width: $small-screen){

@@ -31,6 +31,7 @@ export const historySlice = createSlice({
     resetGame: (state) => {
       state.value.history = []
       state.value.score = 0
+      state.value.winner = ""
     }
   },
 });
