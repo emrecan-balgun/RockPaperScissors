@@ -34,22 +34,3 @@ export const RoundChoices = [
   },
 ];
 
-
-{/*           <img
-            className="choice-board__img choice-board__img--cursor"
-            onClick={() => game(choiceList[0])}
-            src={rockImage}
-            alt={rockImage}
-          />
-          <img
-            className="choice-board__img choice-board__img--cursor"
-            onClick={() => game(choiceList[1])}
-            src={paperImage}
-            alt={paperImage}
-          />
-          <img
-            className="choice-board__img choice-board__img--cursor"
-            onClick={() => game(choiceList[2])}
-            src={scissorsImage}
-            alt={scissorsImage}
-          /> */}
