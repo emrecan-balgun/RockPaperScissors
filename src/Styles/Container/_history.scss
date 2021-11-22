@@ -8,9 +8,10 @@
   border-radius: 1.5rem 1.5rem 0 0;
 
   &__container {
-    max-height: 175px;
+    transition: max-height .5s; 
+
     &--toggle {
-      display: none;
+      max-height: 0 !important;
     }
 
     &-round {
@@ -53,6 +54,7 @@
   @media screen and (max-width: $medium-screen) {
     &__container{
         overflow-y: scroll;
+        max-height: 175px;
     }
   }
 
@@ -60,8 +62,7 @@
   @media screen and (min-width: $medium-screen) {
     position: relative;
     &__container {
-      display: block;
-      max-height: 400px;
+      max-height: 400px !important;
       overflow-y: scroll;
 
       &::-webkit-scrollbar {
